@@ -1,0 +1,84 @@
+<footer>
+  <div class="col-lg-12 st-foot-info-container">
+    <div class="col-lg-4 st-foot-info">
+      <li><i class="fa fa-2x fa-check-circle-o"></i></li>
+      <li>100% genuine products</li>
+    </div>
+    <div class="col-lg-4 st-foot-info">
+      <li><i class="fa fa-2x fa-credit-card"></i></li>
+      <li>Easy checkout and pay</li>
+    </div>
+    <div class="col-lg-4 st-foot-info">
+      <li><i class="fa fa-2x fa-truck"></i></li>
+      <li>Free  delivery</li>
+    </div>
+  </div>
+  <div class="container-fluid" style="padding: 50px 15px">
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
+      <div class="column">
+        <h4>Information</h4>
+        <ul>
+          <li><%= link_to "Privacy Policy" %></li>
+          <li><%= link_to "Terms and Conditions" %></li>
+          <li><%= link_to "Return Policy" %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 text-center">
+      <div class="column">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a>Phone No.: <%= "90063215666" %></a></li>
+          <li><a href="mailto:support@supplythis.com">Email: support@supplythis.com</a></li>
+          <%= link_to "https://www.facebook.com/supplythis", target: "_blank" do %><div class="st-social-link social-facebook"><i class="fa fa-facebook fa-2x"></i></div><% end %>
+          <%= link_to "https://www.linkedin.com/company/supplythis-com?trk=biz-companies-cym", target: "_blank" do %><div class="st-social-link social-linkedin"><i class="fa fa-linkedin fa-2x"></i></div><% end %>
+          <%= link_to "https://twitter.com/Supplythis", target: "_blank" do %><div class="st-social-link social-twitter"><i class="fa fa-twitter fa-2x"></i></div><% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright container-fluid text-center">
+    <div class="col-md-4 col-sm-6">
+      All Rights Reserved &copy; <%= Date.today.year %> <%= link_to "Supplythis", "http://supplythis.com" %>
+    </div>
+
+    <div class="col-md-4 col-sm-12">
+      <%= image_tag("logo_footer.svg", alt: "SupplyThis", height: "40vw") %>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      Powered by <b style="font-size: 10px;"><%= link_to "NightHack", "http://www.nighthack.in", target: "_blank" %></b>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript">  
+  var lastScrollTop = 0;
+  $(window).scroll(function(){
+    if (!$('.st-filters').hasClass("opened")) {
+      var st = $(this).scrollTop();
+      if (st > lastScrollTop){
+        $(".help-ico").removeClass("st-scale");
+      } else {
+        $(".help-ico").addClass("st-scale");
+      }
+      lastScrollTop = st;
+    }
+  });
+
+  if ($(window).width() < 768) {
+    $('.help-ico').click(function () {
+      $('.help-num').fadeToggle();
+    });
+  } else {
+    $('.help-ico').mouseover(function () {
+      $('.help-num').fadeIn();
+    });
+  }
+
+  $('.help-ico').mouseleave(function () {
+    $('.help-num').fadeOut();
+  });
+</script>
